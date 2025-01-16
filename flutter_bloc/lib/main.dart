@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/%20equatable_with_package.dart';
 import 'package:flutter_bloc/equtable_testing.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ), 
-      home:  EquatableTesting(),
+      home:  EquatableWithPackage(),
     );
   }
 }
