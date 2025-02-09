@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_series/counter_bloc/counter_bloc.dart';
-
-import 'package:flutter_bloc_series/view/counter_screen.dart';
+import 'package:flutter_bloc_series/presentation/blocs/counter_bloc/counter_bloc.dart';
+import 'package:flutter_bloc_series/presentation/blocs/switch_example/switch_example_bloc.dart';
+import 'package:flutter_bloc_series/presentation/screens/switch_example/switch_exmple_screen.dart';
+import 'package:flutter_bloc_series/presentation/screens/counter_screen.dart';
 
 void main() {
   runApp(
@@ -25,10 +26,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
     return MultiBlocProvider(
 
       providers: [
-        BlocProvider(create: (_)=>CounterBloc())
+        BlocProvider(create: (_)=>CounterBloc()),
+        BlocProvider(create: (_)=>SwitchExampleBloc()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -37,7 +41,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:  CounterScreen(),
+        home:  SwitchExampleScreen(),
       ),
     );
   }
