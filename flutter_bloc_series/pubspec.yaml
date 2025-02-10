@@ -48,6 +48,9 @@ dependencies:
   audioplayers: ^6.1.2
   just_audio: ^0.9.46
   lottie: ^3.3.1
+  flutter_sound: ^9.2.13
+  permission_handler: ^11.0.1
+  path_provider: ^2.1.1
 
 dev_dependencies:
   flutter_test:
