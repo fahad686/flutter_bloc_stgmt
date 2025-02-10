@@ -4,6 +4,7 @@ import 'package:flutter_bloc_series/presentation/blocs/counter_bloc/counter_bloc
 import 'package:flutter_bloc_series/presentation/blocs/switch_example/switch_example_bloc.dart';
 import 'package:flutter_bloc_series/presentation/screens/switch_example/switch_exmple_screen.dart';
 import 'package:flutter_bloc_series/presentation/screens/counter_screen.dart';
+import 'package:flutter_bloc_series/presentation/screens/voice_chat_example/voice_chat_screen.dart';
 
 void main() {
   runApp(
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:  SwitchExampleScreen(),
+        home:  ChatScreen(),
       ),
     );
   }

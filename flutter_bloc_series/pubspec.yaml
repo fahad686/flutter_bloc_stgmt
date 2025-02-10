@@ -45,6 +45,9 @@ dependencies:
   dio: ^5.7.0
   geolocator: ^13.0.2
   pull_to_refresh: ^2.0.0
+  audioplayers: ^6.1.2
+  just_audio: ^0.9.46
+  lottie: ^3.3.1
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +74,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/images/
+   - assets/lottie_animation/Animation - 1739213373248.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
