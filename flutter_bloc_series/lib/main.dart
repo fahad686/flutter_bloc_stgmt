@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_series/core/utils/image_picker_util.dart';
 import 'package:flutter_bloc_series/presentation/blocs/counter_bloc/counter_bloc.dart';
 import 'package:flutter_bloc_series/presentation/blocs/switch_example/switch_example_bloc.dart';
+import 'package:flutter_bloc_series/presentation/features/image_picker/Image_picker_bloc/image_picker_bloc.dart';
+import 'package:flutter_bloc_series/presentation/features/image_picker/image_picker_screen.dart';
 import 'package:flutter_bloc_series/presentation/screens/switch_example/switch_exmple_screen.dart';
-import 'package:flutter_bloc_series/presentation/screens/counter_screen.dart';
-import 'package:flutter_bloc_series/presentation/screens/voice_chat_example/voice_chat_screen.dart';
 
 void main() {
   runApp(
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (_)=>CounterBloc()),
         BlocProvider(create: (_)=>SwitchExampleBloc()),
+        BlocProvider(create: (_)=>ImagePickerBloc(ImagePickerUtil())),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -42,7 +44,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home:  ChatScreen(),
+        home:  ImagePickerScreen(),
       ),
     );
   }
