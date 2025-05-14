@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_series/core/utils/image_picker_util.dart';
@@ -10,16 +11,16 @@ import 'package:flutter_bloc_series/presentation/screens/switch_example/switch_e
 void main() {
   runApp(
     //add  device preview package for checking  responsive of app on web
-    // DevicePreview(
-    //   enabled: true,
-    //   tools: const [
-    //     ...DevicePreview.defaultTools,
-    //     // CustomPlugin(),
-    //   ],
-    //   builder: (context) =>
+    DevicePreview(
+      enabled: true,
+      tools: const [
+        ...DevicePreview.defaultTools,
+        // CustomPlugin(),
+      ],
+      builder: (context) =>
 
       const MyApp(),
-   // ),
+   ),
   );
 }
 
